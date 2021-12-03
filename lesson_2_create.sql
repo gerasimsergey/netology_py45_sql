@@ -1,8 +1,6 @@
-
 -- drop table tracks;
 -- drop table albums;
 -- drop table artists;
-
 
 create table if not exists artists (
     id serial primary key,
