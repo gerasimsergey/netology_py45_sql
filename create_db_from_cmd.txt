@@ -1,0 +1,11 @@
+# Стартуем
+pg_ctl -D /usr/local/var/postgres start
+
+pgsql # может ругатся так как хочеть подключится к базе sergiigerasimenko
+
+psql postgres
+
+CREATE DATABASE films_db;
+
+# по ходу не обьязательно, роли как то общие
+createuser -P -s films
