@@ -14,7 +14,12 @@ SELECT name FROM collection WHERE year in ('2018', '2019', '2020')
 SELECT name FROM collection WHERE year >= 2018 and year <= 2020
 
 -- 5. исполнители, чье имя состоит из 1 слова;
+-- изначальный вариант, не правильно
 SELECT MIN(string_to_array(name, ' ') ) FROM artist
+-- второй, более правильный
+SELECT name
+FROM artist
+WHERE name NOT LIKE '%% %%';
 
 -- 6. название треков, которые содержат слово "мой"/"my".
 SELECT name FROM track where name LIKE '%My%' OR name LIKE '%Мой%'
